@@ -14,11 +14,11 @@ module.exports = {
     return slot;
   },
   remove: async (id) => {
-    const slot = await _slot.remove(id);
+    const slot = await _slot.findByIdAndRemove(id);
     return slot;
   },
-  update: async (data) => {
-    const slot = await _slot.findByIdAndUpdate(data.id, data, { new: true });
+  update: async (id, data) => {
+    const slot = await _slot.findByIdAndUpdate(id, data, { new: true });
     return slot;
   },
 };

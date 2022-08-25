@@ -11,15 +11,15 @@ module.exports = {
     return res.status(200).json(slot);
   }),
   getSlot: catchAsync(async (req, res) => {
-    const slot = await slotService.get(res.body.id);
+    const slot = await slotService.get(req.params.id);
     return res.status(200).json(slot);
   }),
   removeSlot: catchAsync(async (req, res) => {
-    const slot = await slotService.remove(req.body.id);
+    const slot = await slotService.remove(req.params.id);
     return res.status(200).json(slot);
   }),
   updateSlot: catchAsync(async (req, res) => {
-    const slot = await slotService.update(req.body);
+    const slot = await slotService.update(req.params.id, req.body);
     return res.status(200).json(slot);
   }),
 };

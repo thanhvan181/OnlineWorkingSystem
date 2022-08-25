@@ -3,7 +3,7 @@ const slotControllers = require('../controllers/slot.controller')
 
 const router = express.Router();
 
-router.post("/create", slotControllers.createSlot)
+router.post("/", slotControllers.createSlot)
 router.get("/", slotControllers.getAllSlots)
 router.get("/:id", slotControllers.getSlot)
 router.delete("/:id", slotControllers.removeSlot)
