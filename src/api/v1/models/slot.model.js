@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 
 const SlotSchema = new mongoose.Schema({
-  name: {
+  text: {
     type: String,
+    default: ''
+  },
+  value: {
+    type: Date,
     default: ''
   }
 }, { collection: 'slots', timestamps: true });
