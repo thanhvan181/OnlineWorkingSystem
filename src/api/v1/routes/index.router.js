@@ -3,9 +3,11 @@ const environment = require('../../../config/environment.config');
 
 const router = express.Router();
 const userRouter = require('./user.router');
+const orderRouter = require('./order.router');
 const docsRouter = require('./docs.router');
 
 router.use('/users', userRouter);
+router.use('/orders', orderRouter);
 
 if (environment.env === 'development') {
   router.use('/docs', docsRouter);
