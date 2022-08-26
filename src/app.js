@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.use((error, req, res, next) => {
   res.status(error.statusCode || 500).json({
     status: error.statusCode || 500,
-    message: error.message || 'Internal Server Error'
+    message: error.message || 'Internal Server Error',
   });
 });
 

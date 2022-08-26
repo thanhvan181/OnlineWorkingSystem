@@ -8,7 +8,7 @@ module.exports = {
   }),
   getTeacher: catchAsync(async (req, res) => {
     const filter = { _id: req.params.id };
-    const teachers = await teacherService.find();
+    const teachers = await teacherService.find(filter);
     return res.status(200).json(teachers);
   }),
   createTeacher: catchAsync(async (req, res) => {
@@ -26,5 +26,5 @@ module.exports = {
     const condition = { _id: req.params.id };
     const teachers = await teacherService.remove(condition);
     res.status(200).json(teachers);
-  }),
+  })
 };

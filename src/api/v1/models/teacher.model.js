@@ -6,52 +6,52 @@ const TeacherSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      default: ''
+      default: '',
     },
     gender: {
       type: String,
-      default: 'Nam'
+      default: 'Nam',
     },
     email: {
-      type: String
+      type: String,
     },
     country: {
       type: String,
-      default: 'Vietnam'
+      default: 'Vietnam',
     },
     phone: {
-      type: String
+      type: String,
     },
     languages: {
       type: String,
-      default: 'Vietnamese'
+      default: 'Vietnamese',
     },
     status: {
       type: Boolean,
-      default: true
+      default: true,
     },
     demoBookedSlots: [
       {
         slots: {
-          type: String
+          type: String,
         },
         date: {
           type: Date,
-          default: Date.now()
-        }
-      }
+          default: Date.now(),
+        },
+      },
     ],
     paidBookedSlots: [
       {
         slots: {
-          type: String
+          type: String,
         },
         day: {
           type: String,
-          default: 0
-        }
-      }
-    ]
+          default: 0,
+        },
+      },
+    ],
   },
   { collection: 'teachers', timestamps: true }
 );
