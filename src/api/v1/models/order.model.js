@@ -19,7 +19,7 @@ const OrderSchema = new mongoose.Schema(
     },
     schedule: {
       type: Date,
-      default: '',
+      default: Date.now(),
       require: true,
     },
   },
