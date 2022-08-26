@@ -27,4 +27,5 @@ router.get('/', userController.getAllUsers);
  *         $ref: '#/components/responses/Forbidden'
  */
 
+
 module.exports = router;
