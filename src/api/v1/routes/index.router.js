@@ -4,10 +4,10 @@ const environment = require('../../../config/environment.config');
 const router = express.Router();
 const userRouter = require('./user.router');
 const docsRouter = require('./docs.router');
-const salemansRouter = require('./saleman.router');
+const salemanRouter = require('./saleman.router');
 
 router.use('/users', userRouter);
-router.use('/salemans', salemansRouter);
+router.use('/salemans', salemanRouter);
 if (environment.env === 'development') {
     router.use('/docs', docsRouter);
 }
