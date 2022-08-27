@@ -1,5 +1,5 @@
 const express = require('express');
-const salemanController = require('../controllers/saleman.controller')
+const salemanController = require('../controllers/saleman.controller');
 
 const router = express.Router();
 router.get('/', salemanController.getAllSalemans);

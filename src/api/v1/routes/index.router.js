@@ -9,14 +9,14 @@ const salemanRouter = require('./saleman.router');
 router.use('/users', userRouter);
 router.use('/salemans', salemanRouter);
 if (environment.env === 'development') {
-    router.use('/docs', docsRouter);
+  router.use('/docs', docsRouter);
 }
 
 router.get('/checkstatus', (req, res) => {
-    res.status(200).json({
-        status: 'success',
-        message: 'api ok',
-    });
+  res.status(200).json({
+    status: 'success',
+    message: 'api ok',
+  });
 });
 
 module.exports = router;
