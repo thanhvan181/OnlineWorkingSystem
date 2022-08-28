@@ -7,8 +7,8 @@ module.exports = {
     return res.status(200).json(slot);
   }),
   getAllSlots: catchAsync(async (req, res) => {
-    const slot = await slotService.getAll();
-    return res.status(200).json(slot);
+    const slots = await slotService.getAll();
+    return res.status(200).json(slots);
   }),
   getSlot: catchAsync(async (req, res) => {
     const slot = await slotService.get(req.params.id);

@@ -6,8 +6,8 @@ module.exports = {
     return slot;
   },
   getAll: async () => {
-    const slot = await _slot.find();
-    return slot;
+    const slots = await _slot.find();
+    return slots;
   },
   get: async (id) => {
     const slot = await _slot.findById(id);

@@ -7,7 +7,7 @@ const SlotSchema = new mongoose.Schema({
   },
   value: {
     type: Date,
-    default: ''
+    default: Date.now()
   }
 }, { collection: 'slots', timestamps: true });
 
