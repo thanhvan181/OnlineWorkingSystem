@@ -11,7 +11,7 @@ const getAllOrders = {
   query: Joi.object().keys({
     studentName: Joi.string(),
     studentGrade: Joi.string(),
-    phone: Joi.number().integer(),
+    phone: Joi.string(),
     schedule: Joi.date(),
   }),
 };
@@ -26,7 +26,7 @@ const createOrder = {
   body: Joi.object().keys({
     studentName: Joi.string().required(),
     studentGrade: Joi.string().required(),
-    phone: Joi.number().required().min(10),
+    phone: Joi.string().required().min(10),
     schedule: Joi.date().required(),
   }),
 };
@@ -37,7 +37,7 @@ const updateOrder = {
   body: Joi.object().keys({
     studentName: Joi.string().required(),
     studentGrade: Joi.string().required(),
-    phone: Joi.number().required().min(10),
+    phone: Joi.string().required().min(10),
     schedule: Joi.date().required(),
   }),
 };
