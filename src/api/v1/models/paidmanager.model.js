@@ -1,33 +1,36 @@
 const mongoose = require('mongoose');
 
 const PaidmanagerSchema = new mongoose.Schema(
-  {
+ {
     name: {
       type: String,
-      default: '',
+      required: true,
     },
     gender: {
       type: String,
-      default: '',
+      required: true,
     },
     email: {
       type: String,
-      default: '',
+      unique: true,
+      required: true,
+      trim: true,
     },
     country: {
       type: String,
-      default: '',
+      required: true,
     },
     phone: {
       type: String,
-      default: '',
+      required: true,
     },
     languages: {
       type: String,
-      default: '',
+      required: true,
     },
   },
-  { collection: 'paidmanagers', timestamps: true }
+  { collection: 'salemans', timestamps: true }
 );
+
 
 module.exports = mongoose.model('paidmanagers', PaidmanagerSchema);
