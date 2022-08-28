@@ -1,5 +1,8 @@
+const os = require('os');
 const app = require('./src/app');
 const environment = require('./src/config/environment.config');
+
+process.env.UV_THREADPOOL_SIZE = os.cpus().length;
 
 app.listen(environment.port, () => {
   console.clear();
