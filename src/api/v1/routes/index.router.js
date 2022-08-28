@@ -5,9 +5,11 @@ const router = express.Router();
 const userRouter = require('./user.router');
 const slotRouter = require('./slot.router');
 const docsRouter = require('./docs.router');
+const salemanRouter = require('./saleman.router');
 
 router.use('/users', userRouter);
 router.use('/slots', slotRouter);
+router.use('/salemans', salemanRouter);
 
 if (environment.env === 'development') {
   router.use('/docs', docsRouter);
