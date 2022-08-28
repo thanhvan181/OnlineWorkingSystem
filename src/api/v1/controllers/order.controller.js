@@ -2,9 +2,9 @@ const orderService = require('../services/order.service');
 const catchAsync = require('../utils/catchAsync');
 
 module.exports = {
-  getAllOrder: catchAsync(async (req, res, next) => {
-    const order = await orderService.findAll();
-    return res.status(200).json(order);
+  getAllOrders: catchAsync(async (req, res, next) => {
+    const orders = await orderService.findAll();
+    return res.status(200).json(orders);
   }),
   getOrder: catchAsync(async (req, res, next) => {
     const order = await orderService.findOne(req.params._id);

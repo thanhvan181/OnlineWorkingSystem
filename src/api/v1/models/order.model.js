@@ -5,22 +5,22 @@ const OrderSchema = new mongoose.Schema(
     studentName: {
       type: String,
       default: '',
-      require: true,
+      required: true,
     },
     studentGrade: {
       type: String,
       default: '',
-      require: true,
+      required: true,
     },
     phone: {
       type: String,
       default: '',
-      require: true,
+      required: true,
     },
     schedule: {
       type: Date,
       default: Date.now(),
-      require: true,
+      required: true,
     },
   },
   { collection: 'orders', timestamps: true }
