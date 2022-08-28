@@ -6,10 +6,12 @@ const userRouter = require('./user.router');
 const slotRouter = require('./slot.router');
 const docsRouter = require('./docs.router');
 const salemanRouter = require('./saleman.router');
+const orderRouter = require('./order.router');
 
 router.use('/users', userRouter);
 router.use('/slots', slotRouter);
 router.use('/salemans', salemanRouter);
+router.use('/orders', orderRouter);
 
 if (environment.env === 'development') {
   router.use('/docs', docsRouter);
