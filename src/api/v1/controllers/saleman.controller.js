@@ -7,19 +7,19 @@ module.exports = {
     return res.status(200).json(saleman);
   }),
   getAllSalemans: catchAsync(async (req, res) => {
-    const salemans = await salemanService.getAll();
+    const salemans = await salemanService.findAll();
     return res.status(200).json(salemans);
   }),
   getSaleman: catchAsync(async (req, res) => {
-    const saleman = await salemanService.get(req.params.id);
+    const saleman = await salemanService.findOne(req.params.id);
     return res.status(200).json(saleman);
   }),
   removeSaleman: catchAsync(async (req, res) => {
-    const saleman = await salemanService.remove(req.params.id);
+    const saleman = await salemanService.findOneAndDelete(req.params.id);
     return res.status(200).json(saleman);
   }),
   updateSaleman: catchAsync(async (req, res) => {
-    const saleman = await salemanService.update(req.params.id, req.body);
+    const saleman = await salemanService.findOneAndUpdate(req.params.id, req.body);
     return res.status(200).json(saleman);
   }),
 };
