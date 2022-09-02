@@ -7,7 +7,7 @@ module.exports = {
     return res.status(200).json(teachers);
   }),
   getTeacher: catchAsync(async (req, res) => {
-    const filter = { _id: req.params.id };
+    const filter = {_id: req.params.id};
     const teacher = await teacherService.find(filter);
     return res.status(200).json(teacher);
   }),
@@ -16,15 +16,15 @@ module.exports = {
     return res.status(200).json(teacher);
   }),
   updateTeacher: catchAsync(async (req, res) => {
-    const condition = { _id: req.params.id };
+    const condition = {_id: req.params.id};
     const doc = req.body;
-    const option = { new: true };
+    const option = {new: true};
     const teacher = await teacherService.update(condition, doc, option);
     return res.status(200).json(teacher);
   }),
   removeTeacher: catchAsync(async (req, res) => {
-    const condition = { _id: req.params.id };
+    const condition = {_id: req.params.id};
     const teacher = await teacherService.remove(condition);
     res.status(200).json(teacher);
-  })
+  }),
 };

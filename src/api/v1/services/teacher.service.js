@@ -20,5 +20,5 @@ module.exports = {
   create: async (req, res) => {
     const teacher = await new _teacher(req.body).save();
     return teacher;
-  }
+  },
 };

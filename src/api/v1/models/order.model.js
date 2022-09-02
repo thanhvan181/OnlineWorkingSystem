@@ -23,7 +23,7 @@ const OrderSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { collection: 'orders', timestamps: true }
+  {collection: 'orders', timestamps: true}
 );
 
 module.exports = mongoose.model('orders', OrderSchema);

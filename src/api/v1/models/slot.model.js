@@ -11,7 +11,7 @@ const SlotSchema = new mongoose.Schema(
       default: Date.now(),
     },
   },
-  { collection: 'slots', timestamps: true }
+  {collection: 'slots', timestamps: true}
 );
 
 module.exports = mongoose.model('slots', SlotSchema);

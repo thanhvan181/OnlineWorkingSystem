@@ -5,10 +5,10 @@ const orderValidatetion = require('../validations/order.validation');
 
 const router = express.Router();
 
-router.get('/', validate(orderValidatetion.getAllOrders), orderController.getAllOrders);
-router.get('/:id', validate(orderValidatetion.getOrder), orderController.getOrder);
+router.get('/', orderController.getAllOrders);
+router.get('/:id', orderController.getOrder);
 router.post('/', validate(orderValidatetion.createOrder), orderController.createOrder);
-router.put('/:id', validate(orderValidatetion.updateOrder), orderController.updateOrder);
-router.delete('/:id', validate(orderValidatetion.deleteOrder), orderController.deleteOrder);
+router.put('/:id', orderController.updateOrder);
+router.delete('/:id', orderController.deleteOrder);
 
 module.exports = router;

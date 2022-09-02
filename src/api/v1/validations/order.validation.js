@@ -53,3 +53,6 @@ module.exports = {
   updateOrder,
   deleteOrder,
 };
+module.exports = {
+  createOrder,
+};

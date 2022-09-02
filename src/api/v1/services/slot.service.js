@@ -18,7 +18,7 @@ module.exports = {
     return slot;
   },
   update: async (id, data) => {
-    const slot = await _slot.findByIdAndUpdate(id, data, { new: true });
+    const slot = await _slot.findByIdAndUpdate(id, data, {new: true});
     return slot;
   },
 };
