@@ -10,7 +10,7 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('tiny'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 app.use(
   compression({
     level: 6,

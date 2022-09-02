@@ -1,4 +1,4 @@
-const { version } = require('../../../../package.json');
+const {version} = require('../../../../package.json');
 const environment = require('../../../config/environment.config');
 
 module.exports = {

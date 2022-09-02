@@ -1,6 +1,6 @@
-const { string } = require('joi');
+const {string} = require('joi');
 const mongoose = require('mongoose');
-const { ObjectId } = require('mongoose');
+const {ObjectId} = require('mongoose');
 
 const TeacherSchema = new mongoose.Schema(
   {
@@ -53,7 +53,7 @@ const TeacherSchema = new mongoose.Schema(
       },
     ],
   },
-  { collection: 'teachers', timestamps: true }
+  {collection: 'teachers', timestamps: true}
 );
 
 module.exports = mongoose.model('teachers', TeacherSchema);
