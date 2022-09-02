@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PaidmanagerSchema = new mongoose.Schema(
- {
+  {
     name: {
       type: String,
       required: true,
@@ -31,6 +31,5 @@ const PaidmanagerSchema = new mongoose.Schema(
   },
   { collection: 'salemans', timestamps: true }
 );
-
 
 module.exports = mongoose.model('paidmanagers', PaidmanagerSchema);

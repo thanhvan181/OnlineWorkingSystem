@@ -1,6 +1,5 @@
 const _paidmanager = require('../models/paidmanager.model');
 
-
 module.exports = {
   findAll: async () => {
     const salemans = await _paidmanager.find();
@@ -23,4 +22,3 @@ module.exports = {
     return saleman;
   },
 };
-;
