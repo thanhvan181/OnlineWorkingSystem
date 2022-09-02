@@ -4,9 +4,10 @@ const environment = require('../../../config/environment.config');
 const router = express.Router();
 const userRouter = require('./user.router');
 const docsRouter = require('./docs.router');
+const paidmanagerRouter = require('./paidmanager.router');
 
 router.use('/users', userRouter);
-
+router.use('/paidmanager', paidmanagerRouter);
 if (environment.env === 'development') {
   router.use('/docs', docsRouter);
 }
