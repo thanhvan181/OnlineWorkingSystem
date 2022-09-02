@@ -3,9 +3,9 @@ const paidmanagerController = require('../controllers/paidmanager.controller');
 
 
 const router = express.Router();
-router.get('/', paidmanagerController.getAllSalemans);
-router.get('/:id', paidmanagerController.getSaleman);
-router.post('/', paidmanagerController.createSaleman);
-router.delete('/:id', paidmanagerController.removeSaleman);
-router.patch('/:id', paidmanagerController.updateSaleman);
+router.get('/', paidmanagerController.getAll);
+router.get('/:id', paidmanagerController.get);
+router.post('/', paidmanagerController.create);
+router.delete('/:id', paidmanagerController.remove);
+router.patch('/:id', paidmanagerController.update);
 module.exports = router;
