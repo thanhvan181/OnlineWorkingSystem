@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const minimist = require('minimist');
 
 if (process.env.NODE_ENV === 'development') {
-  dotenv.config({ path: '.env.local' });
+  dotenv.config({path: '.env.local'});
 } else {
   dotenv.config();
 }
