@@ -29,7 +29,7 @@ const SalemanSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { collection: 'salemans', timestamps: true }
+  {collection: 'salemans', timestamps: true}
 );
 
 module.exports = mongoose.model('salemans', SalemanSchema);
