@@ -2,23 +2,23 @@ const _paidmanager = require('../models/paidmanager.model');
 
 module.exports = {
   findAll: async () => {
-    const salemans = await _paidmanager.find();
-    return salemans;
+    const paidmanagers = await _paidmanager.find();
+    return paidmanagers;
   },
   findOne: async (id) => {
-    const saleman = await _paidmanager.findById(id);
-    return saleman;
+    const paidmanager = await _paidmanager.findById(id);
+    return paidmanager;
   },
   findOneAndDelete: async (id) => {
-    const saleman = await _paidmanager.findByIdAndRemove(id);
-    return saleman;
+    const paidmanager = await _paidmanager.findByIdAndRemove(id);
+    return paidmanager;
   },
   findOneAndUpdate: async (id, data) => {
-    const saleman = await _paidmanager.findByIdAndUpdate(id, data, { new: true });
-    return saleman;
+    const paidmanager = await _paidmanager.findByIdAndUpdate(id, data, { new: true });
+    return paidmanager;
   },
   create: async (data) => {
-    const saleman = await _paidmanager.create(data);
-    return saleman;
+    const paidmanager = await _paidmanager.create(data);
+    return paidmanager;
   },
 };

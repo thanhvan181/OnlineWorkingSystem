@@ -29,7 +29,7 @@ const PaidmanagerSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { collection: 'salemans', timestamps: true }
+  { collection: 'paidmanagers', timestamps: true }
 );
 
 module.exports = mongoose.model('paidmanagers', PaidmanagerSchema);
