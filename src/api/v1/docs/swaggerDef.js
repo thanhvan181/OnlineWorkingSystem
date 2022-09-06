@@ -1,5 +1,5 @@
-const { version } = require('../../package.json');
-const environment = require('../config/environment.config');
+const {version} = require('../../../../package.json');
+const environment = require('../../../config/environment.config');
 
 module.exports = {
   openapi: '3.0.0',
