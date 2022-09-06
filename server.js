@@ -3,6 +3,7 @@ const app = require('./src/app');
 const environment = require('./src/config/environment.config');
 
 process.env.UV_THREADPOOL_SIZE = os.cpus().length;
+process.env.TZ = 'Asia/Ho_Chi_Minh';
 
 app.listen(environment.port, () => {
   console.clear();

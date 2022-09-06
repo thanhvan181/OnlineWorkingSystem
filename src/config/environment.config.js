@@ -12,4 +12,9 @@ module.exports = {
   port: parseInt(argv.port || process.env.PORT || '5000', 10),
   mongo_uri: process.env.MONGO_URI,
   env: process.env.NODE_ENV,
+  google: {
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    clientUrl: process.env.CLIENT_URL,
+  },
 };
