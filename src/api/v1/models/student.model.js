@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const SalemanSchema = new mongoose.Schema(
+const StudentSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -29,7 +29,8 @@ const SalemanSchema = new mongoose.Schema(
       required: true,
     },
   },
-  {collection: 'salemans', timestamps: true}
+  { collection: 'students', timestamps: true }
 );
 
-module.exports = mongoose.model('salemans', SalemanSchema);
+
+module.exports = mongoose.model('students', StudentSchema);

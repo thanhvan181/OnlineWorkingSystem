@@ -14,7 +14,7 @@ module.exports = {
     return saleman;
   },
   findOneAndUpdate: async (id, data) => {
-    const saleman = await _salemans.findByIdAndUpdate(id, data, { new: true });
+    const saleman = await _salemans.findByIdAndUpdate(id, data, {new: true});
     return saleman;
   },
   create: async (data) => {

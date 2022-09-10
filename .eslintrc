@@ -8,6 +8,7 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
+  "plugins": ["prettier"],
   "rules": {
     "global-require": 0,
     "no-unused-vars": "off",
