@@ -19,7 +19,7 @@ const SlotSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { collection: 'slots', timestamps: true }
+  {collection: 'slots', timestamps: true}
 );
 
 module.exports = mongoose.model('slots', SlotSchema);

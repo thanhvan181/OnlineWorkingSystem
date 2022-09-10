@@ -27,7 +27,7 @@ const createOrder = {
     studentName: Joi.string().required(),
     studentGrade: Joi.string().required(),
     phone: Joi.string().required().min(10),
-    schedule: Joi.date().required(),
+    schedule: Joi.string().required(),
   }),
 };
 const updateOrder = {

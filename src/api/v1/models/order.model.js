@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const {ObjectId} = mongoose.Schema;
+
 const OrderSchema = new mongoose.Schema(
   {
     studentName: {
@@ -18,9 +20,8 @@ const OrderSchema = new mongoose.Schema(
       required: true,
     },
     schedule: {
-      type: Date,
-      default: Date.now(),
-      required: true,
+      type: ObjectId,
+      ref: 'slots',
     },
   },
   {collection: 'orders', timestamps: true}
