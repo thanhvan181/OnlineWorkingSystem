@@ -1,6 +1,5 @@
 const _student = require('../models/student.model');
 
-
 module.exports = {
   findAll: async () => {
     const students = await _student.find();
@@ -15,7 +14,7 @@ module.exports = {
     return student;
   },
   findOneAndUpdate: async (id, data) => {
-    const student = await _student.findByIdAndUpdate(id, data, { new: true });
+    const student = await _student.findByIdAndUpdate(id, data, {new: true});
     return student;
   },
   create: async (data) => {
@@ -23,4 +22,3 @@ module.exports = {
     return student;
   },
 };
-;

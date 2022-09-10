@@ -2,7 +2,7 @@ const _order = require('../models/order.model');
 
 module.exports = {
   findAll: async () => {
-    const orders = await _order.find({});
+    const orders = await _order.find({}).populate('schedule');
     return orders;
   },
   findOne: async (_id) => {
